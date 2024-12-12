@@ -16,4 +16,4 @@ RUN ./mvnw clean package
 EXPOSE 8080
 
 # Rodar a aplicação
-CMD ["java", "-jar", "target/seu-app.jar"]
+CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
