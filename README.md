@@ -31,14 +31,14 @@
 
 ### Acessar Banco de Dados
 
-- URL: http://localhost:8080/h2-console
+- Endpoint: /h2-console
 - JDBC URL: jdbc:h2:mem:testdb
 - User: sa
 - Password:
 
 ### Acessar o Swagger UI:
 
-- URL: http://localhost:8080/swagger-ui.html
+- Endpoint: /swagger-ui.html
 
 ### Meus testes
 
