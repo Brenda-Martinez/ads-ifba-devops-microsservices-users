@@ -1,0 +1,5 @@
+br\edu\ifba\demo\Service\UserService.class
+br\edu\ifba\demo\Controller\UserController.class
+br\edu\ifba\demo\DemoApplication.class
+br\edu\ifba\demo\Repository\UserRepository.class
+br\edu\ifba\demo\Entity\User.class
