@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Usuário</title>
+</head>
+<body style="background: pink;">
+    <div style="background: white; width: 55%; padding: 50px 10px 20px; text-align: center; margin: 10% auto;">
+        <div style="width: 350px; height: 100px; border-radius: 10px; background-color: pink; margin: 0 auto;">
+            <h1 style="padding: 1em 0;">Atualizar Usuário</h1>
+        </div>
+        <br>
+        <div style="margin: 1em auto 0; padding: 1em 0em; width: 300px; border: 2px dotted pink;">
+            <form action="#" 
+            th:action="@{/update/{id}(id=${user.id})}" 
+            th:object="${user}" 
+            method="post">
+                <label for="name">Nome</label>
+                <input type="text" th:field="*{name}" id="name" placeholder="Name">
+                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                <br><br>
+                <label for="email">Email</label>
+                <input type="text" th:field="*{email}" id="email" placeholder="Email" readonly>
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                <br><br>
+                <label for="password">Senha</label>
+                <input type="text" th:field="*{password}" id="password" placeholder="password">
+                <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                <br><br>
+                <input type="submit" value="Atualizar Dados" style="background-color: pink; width: fit-content; padding: 0.5em; border: 1px solid hotpink; margin: 0 auto; text-decoration: none; color: black;">   
+            </form>
+        </div>
+        <br>
+        <p style="background-color: pink; width: fit-content; padding: 0.5em; border: 1px solid hotpink;"><a href="/index" style="text-decoration: none; color: black;">Voltar</a></p>
+    </div>
+</body>
+</html>

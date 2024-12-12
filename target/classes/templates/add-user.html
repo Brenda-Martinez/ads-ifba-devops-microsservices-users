@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Cadastro</title>
+</head>
+<body style="background: pink;">
+    <div style="background: white; width: 50%; padding: 50px 10px 20px; margin: 10% auto;">
+        <div style="width: 300px; height: 100px; border-radius: 10px; background-color: pink; margin: 0 auto;">
+            <h1 style="padding: 1em 1.7em;">Novo Usuário</h1>
+        </div>
+
+        <div style="margin: 1em auto 0; padding: 1em 0em 1em 3em; width: 300px; border: 2px dotted pink;">
+            <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
+                <label for="name">Nome: </label>
+                <input type="text" th:field="*{name}" id="name">
+                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                <br><br>
+                <label for="email">Email: </label>
+                <input type="text" th:field="*{email}" id="email">
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                <br><br>
+                <label for="password">Senha: </label>
+                <input type="password" th:field="*{password}" id="password">
+                <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                <br><br>
+                <input type="submit" value="Cadastrar" style="border: 1px solid hotpink; background-color: pink; margin: 0 25%;">   
+            </form>
+        </div>
+        <br>
+        <p style="background-color: pink; width: fit-content; padding: 0.5em; border: 1px solid hotpink;"><a href="/index" style="text-decoration: none; color: black;">Voltar</a></p>
+    </div>
+</body>
+</html>
