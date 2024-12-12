@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Todos os Usuarios</title>
+</head>
+<body style="background: pink;">
+    <div style="background: white; width: 55%; padding: 50px 10px 20px; margin: 10% auto;">
+        <div style="width: 360px; height: 100px; border-radius: 10px; background-color: pink; margin: 0 auto;">
+            <h1 style="padding: 1em 1.7em;">Todos os Usuários</h1>
+        </div>
+        <h2 th:if="${users == null || users.isEmpty()}" style="text-align: center;">Nenhum usuário cadastrado.</h2>
+            <div th:if="${users != null && !users.isEmpty()}" style="margin: 1em auto 0; padding: 1em 0.5em 1em 0.5em; width: 350px; border: 2px dotted pink; overflow-x:auto;">
+                <table style="padding-left: 0; margin-left: 0;">
+                    <thead style="background-color: pink;">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th colspan="2">Operacoes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr th:each="user : ${users}">
+                            <td th:text="${user.name}" style="border: 1px dotted pink;"></td>
+                            <td th:text="${user.email}" style="border: 1px dotted pink;"></td>
+                            <td><a th:href="@{/edit/{id}(id=${user.id})}" style="text-decoration: none; color: black; padding: 2px 5px; background-color: pink; border: 1px solid hotpink;">Editar</a></td>
+                            <td><a th:href="@{/delete/{id}(id=${user.id})}" style="text-decoration: none; color: black; padding: 2px 5px; background-color: pink; border: 1px solid hotpink;">Excluir</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <br>
+        <p style="background-color: pink; width: fit-content; padding: 0.5em; border: 1px solid hotpink;"><a href="/index" style="text-decoration: none; color: black;">Voltar</a></p>
+    </div>
+</body>
+</html>
