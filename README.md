@@ -43,11 +43,11 @@
 ### Meus testes
 
 - GET \users
-![GET](https://imgur.com/a/ULpcffg)
+![GET](Screenshot_1.png)
 
 - POST \users
-![POST](https://imgur.com/a/7IXgSCw)
-![POST1](https://imgur.com/a/4ezGHHd)
+![POST](Screenshot_2.png)
+![POST1](Screenshot_3.png)
 
 ### Deploy
 [https://brenda-martinez-ads-ifba-devops-a1.onrender.com/index](https://brenda-martinez-ads-ifba-devops-a1.onrender.com/index)
